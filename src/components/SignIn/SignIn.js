@@ -239,7 +239,7 @@ const SignIn = () => {
                                 <a
                                     className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1kgfegd-MuiTypography-root-MuiLink-root"
                                     href="http://localhost:3000/login"
-                                >SebPrestele</a>
+                                >AccessToken</a>
                                 2023.
                             </p>
                         </form>
