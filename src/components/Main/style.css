@@ -1,0 +1,78 @@
+* {
+    font-family: Euclid Circular A;
+}
+#common_bg {
+    background: #082552;
+}
+#common_txt {
+    color: #082552;
+}
+#btn_signup {
+    background: #0066F6;
+}
+#info {
+    background: #E5F0FE;
+}
+#normal_text {
+    color: #6C82A3;
+}
+#subheading {
+    color: #082552;
+}
+#img_background {
+    background: #0066F5;
+}
+#img_content {
+    width: 500px;
+}
+#Disclaimer {
+   background: #E5F0FE;
+}
+#blog_collapse1 {
+    color: #6C82A3;
+}
+#blog_collapse2 {
+    color: #6C82A3;
+}
+#blog_collapse3 {
+    color: #6C82A3;
+}
+#blog_collapse4 {
+    color: #6C82A3;
+}
+#blog_collapse5 {
+    color: #6C82A3;
+}
+
+#investments_collapse1 {
+    color: #6C82A3;
+    z-index: 1;
+}
+#investments_collapse2 {
+    color: #6C82A3;
+    z-index: 1;
+}
+#investments_collapse3 {
+    color: #6C82A3;
+    z-index: 1;
+}
+#investments_collapse4 {
+    color: #6C82A3;
+    z-index: 1;
+}
+#investments_collapse5 {
+    color: #6C82A3;
+    z-index: 1;
+}
+#investments_collapse6 {
+    color: #6C82A3;
+    z-index: 1;
+}
+
+#invest_right_img {
+    width: 400px;
+}
+#bot {
+    color: #082552;
+    width: 260px;
+}
