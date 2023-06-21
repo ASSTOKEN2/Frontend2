@@ -46,8 +46,8 @@ const DashBody = () => {
                                         <div className="col-12">
                                             <div className="quick_activity_wrap">
                                                 <div className="single_quick_activity">
-                                                    <h4>Total Blogs</h4>
-                                                    <h3><span className="counter">{Details.total}</span></h3>
+                                                    <h4 id="heading_4">Total Blogs</h4>
+                                                    <h3 id="heading_3"><span className="counter">{Details.total}</span></h3>
                                                     <div className="icon-div" style={{ position: "relative", left: "40%" }}>
                                                         <div className="icon">
                                                             +
@@ -55,8 +55,8 @@ const DashBody = () => {
                                                     </div>
                                                 </div>
                                                 <div className="single_quick_activity">
-                                                    <h4>Total Images</h4>
-                                                    <h3> <span className="counter">{Details.images}</span></h3>
+                                                    <h4 id="heading_4">Total Images</h4>
+                                                    <h3 id="heading_3"> <span className="counter">{Details.images}</span></h3>
                                                     <div className="icon-div" style={{ position: "relative", left: "40%" }}>
                                                         <div className="icon">
                                                             +
@@ -64,14 +64,14 @@ const DashBody = () => {
                                                     </div>
                                                 </div>
                                                 <div className="single_quick_activity">
-                                                    <h4>Uploaded Blogs</h4>
-                                                    <h3> <span className="counter">0</span></h3>
-                                                    <p>Manage</p>
+                                                    <h4 id="heading_4">Uploaded Blogs</h4>
+                                                    <h3 id="heading_3"> <span className="counter">0</span></h3>
+                                                    <p id="para">Manage</p>
                                                 </div>
                                                 <div className="single_quick_activity">
-                                                    <h4>Uploaded Images</h4>
-                                                    <h3> <span className="counter">0</span></h3>
-                                                    <p>Manage</p>
+                                                    <h4 id="heading_4">Uploaded Images</h4>
+                                                    <h3 id="heading_3"> <span className="counter">0</span></h3>
+                                                    <p id="para">Manage</p>
                                                 </div>
                                             </div>
                                         </div>

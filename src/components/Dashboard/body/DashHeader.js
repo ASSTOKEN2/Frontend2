@@ -55,12 +55,12 @@ const DashHeader = () => {
                         <div className="header_right d-flex justify-content-between align-items-center">
                             <div className="header_notification_warp d-flex align-items-center">
                                 <li>
-                                    <a href="client.github.io/#/dashboard">
+                                    <a href="client.github.io/#/dashboard" id="link">
                                         <img src={require("../img/bell.svg")} alt="" />
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="client.github.io/#/dashboard">
+                                    <a href="client.github.io/#/dashboard" id="link">
                                         <img src={require("../img/msg.svg")} alt="" />
                                     </a>
                                 </li>
@@ -77,12 +77,12 @@ const DashHeader = () => {
 
                                 }
                                 <div className="profile_info_iner">
-                                    <p>Welcome {Details.user.role}!</p>
-                                    <h5>{Details.user.username}</h5>
+                                    <p id="para">Welcome {Details.user.role}!</p>
+                                    <h5 id="heading_5">{Details.user.username}</h5>
                                     <div className="profile_info_details">
                                         <Link to="/profile">My Profile <i className="ti-user"></i></Link>
-                                        <a href="#">Settings <i className="ti-settings"></i></a>
-                                        <a href="">Log Out <i className="ti-shift-left"></i></a>
+                                        <a href="#" id="link">Settings <i className="ti-settings"></i></a>
+                                        <a href="" id="link">Log Out <i className="ti-shift-left"></i></a>
                                     </div>
                                 </div>
                             </div>

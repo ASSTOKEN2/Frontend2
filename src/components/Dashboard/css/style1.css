@@ -12,7 +12,7 @@
   background: -o-linear-gradient(left, #7c32ff 0%, #a235ec 70%, #c738d8 100%);
   background: linear-gradient(90deg, #7c32ff 0%, #a235ec 70%, #c738d8 100%);
 }
-body {
+#dashboard_body {
   padding: 0;
   margin: 0;
 }
@@ -110,14 +110,14 @@ a {
 a:hover {
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+#heading_1,
+#heading_2,
+#heading_3,
+#heading_4,
+#heading_5,
+#heading_6 {
   color: #222;
-  font-family: muli, sans-serif;
+  font-family: 'Euclid Circular A', muli, sans-serif;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -143,12 +143,12 @@ ol {
   margin: 0;
   padding: 0;
 }
-p {
+#para {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
   color: #828bb2;
-  font-family: muli, sans-serif;
+  font-family: 'Euclid Circular A', muli, sans-serif;
   font-weight: 300;
 }
 
@@ -3864,7 +3864,7 @@ canvas#highlights {
   border: 1px solid #fef1f2;
   padding: 10px;
 }
-.gj-picker-md table tr td.today div {
+.gj-picker-md table tr td.today #div {
   color: #fff;
   background: #3b76ef;
   border-radius: 50%;
