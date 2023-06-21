@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Navbar from '../navbar/Navbar'
 import { Outlet } from 'react-router-dom'
-import Footer from './Footer'
+import Footer from '../footer/Footer'
 import './style.css'
 const Main = () => {
     return (
@@ -9,6 +9,7 @@ const Main = () => {
             <Navbar />
             <Outlet />
             <Footer />
+
         </>
     )
 }

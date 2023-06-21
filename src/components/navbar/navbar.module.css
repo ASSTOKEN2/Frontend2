@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  padding-bottom: 0;
+}
+
+.logo {
+  color: #000;
+}
+
+.linkCont {
+  display: flex;
+  gap: 2rem;
+}
+.links {
+  color: #000;
+  text-decoration: none;
+}
+
+.btnCont {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 0.8rem;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.primary {
+  background-color: #0066f6;
+  color: #fff;
+}
+
+.secondary {
+  background-color: inherit;
+  color: #000;
+  border: 1px solid #000;
+}

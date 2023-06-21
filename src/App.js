@@ -13,6 +13,7 @@ import Blog from './components/Blog/BlogPage';
 import Investments from './components/Investesment/InvestmentsPage';
 import PrivacyPolicyContent from './components/PrivacyPolicy/PrivacyPolicyContent';
 import TermsOfUse from './components/TOU/TermsOfUsePage';
+import Body from './components/Suscribe/Body';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/privacy-policy' element={<PrivacyPolicyContent />} />
           <Route path='/terms-of-use' element={<TermsOfUse />} />
         </Route>
+        <Route path='/suscribe' element={<Body />} />
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<DashBody />} />
           <Route path='/dashboard/token' element={<Tokens />} />

@@ -1,15 +1,14 @@
 import React from "react"
+import Hero from "../hero/Hero";
 
 export default function Home() {
 	return (
 		<>
-			<p className="container text-center">Investing in real estate has never been easier. With our innovative platform, you can now access lucrative real estate investment opportunities through tokenization. Take advantage of fractional ownership and join the growing community of digital real estate investors.</p>
+
 			<div className="container-fluid pb-5">
 				<div className="row pb-5">
 
-					<img className="img-fluid position-absolute" src="Images/HomePage/Union_bg.png" />
-					<img className="img-fluid" src="Images/HomePage/Union.png" />
-
+					<Hero />
 
 					<div className="col-sm-6 p-5">
 						<div className="row">

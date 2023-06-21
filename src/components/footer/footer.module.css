@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px 30px;
+  background-color: #082552;
+  color: #fff;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.firstContainer {
+  flex: 4;
+  padding-right: 50px;
+  margin-bottom: 20px;
+}
+.secondContainer {
+  flex: 1;
+}
+.thirdContainer {
+  flex: 1;
+}
+.fourthContainer {
+  flex: 1;
+}
+
+.logo {
+}
+.logoText {
+}
+
+.header {
+  font-size: 20px;
+}
+.list {
+  list-style: none;
+}
+.listItem {
+}
+
+.signUp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.media {
+  display: flex;
+  gap: 20px;
+}
+
+.inputContainer {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 300px;
+  border-radius: 4px;
+}
+.input {
+  outline: none;
+  border: none;
+  background: none;
+  flex: 8;
+}

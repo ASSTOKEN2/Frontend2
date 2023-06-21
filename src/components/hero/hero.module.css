@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn {
+  width: 200px;
+  padding: 15px;
+  background: none;
+  background-color: #0066f5;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  margin-top: 19px;
+  font-size: 1rem;
+}
+
+.imgContainer {
+  width: 100vw;
+  padding: 0;
+}
+
+.img {
+  object-fit: contain;
+  width: 100vw;
+  margin-top: 0;
+}
+
+.heroText {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.heroHeader {
+  color: #082552;
+  letter-spacing: 5px;
+  font-size: 40px;
+  line-height: 2;
+}

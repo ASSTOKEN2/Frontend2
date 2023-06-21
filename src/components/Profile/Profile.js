@@ -5,12 +5,11 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
 import { RiPencilFill } from 'react-icons/ri'
 import indexService from '../../services/indexService'
 import axios from 'axios'
-import dotenv from 'dotenv'
-import path from 'path'
+
 
 const Profile = () => {
 
-    console.log(process.env.PUBLIC_URL.REACT_APP_UPLOAD_PRESET)
+
     let initialDetails = {
         files: { 0: {}, length: "" }
     }
@@ -98,9 +97,9 @@ const Profile = () => {
             console.log(Details.files)
             const formData = new FormData();
             formData.append("file", Details.files);
-            formData.append("upload_preset", process.env.REACT_APP_UPLOAD_PRESET);
+            formData.append("upload_preset", "sYmb@l1C");
 
-            axios.post(process.env.REACT_APP_CLOUDINARY_URL, formData).then((response) => {
+            axios.post('https://api.cloudinary.com/v1_1/dyevylpk8/image/upload', formData).then((response) => {
                 if (response.data.secure_url) {
                     const oldurl = response.data.secure_url
                     // const url = newurl[0] + ".png"
