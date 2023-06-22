@@ -8,35 +8,35 @@ export default function Navbar() {
             <div className="navbar navbar-expand-sm bg-white">
                 <div className="container-fluid pt-5">
 
-                    <div class="container-fluid">
+                    
 
 
                         <Link className="navbar-brand" to='/'>
-                            <img src={require('../Dashboard/img/logo2.png')} style={{ width: '144px' }} alt="" />
+                            <img src={require('../Dashboard/img/Logo.png')} style={{ width: '200px' }} alt="" />
                         </Link>
 
 
-                    </div>
+                
 
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav pt-5">
                         <div className="navbar-nav">
                             <li class="nav-item">
-                                <Link class="nav-link px-4" id="common_txt" to="#"><h4>About</h4></Link>
+                                <Link class="nav-link px-3" id="common_txt" to="#"><h4>About</h4></Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link px-4" id="common_txt" to="#"><h4>Services</h4></Link>
+                                <Link class="nav-link px-3" id="common_txt" to="#"><h4>Services</h4></Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link px-4" id="common_txt" to={`/investment`}><h4>Investments</h4></Link>
+                                <Link class="nav-link px-3" id="common_txt" to={`/investment`}><h4>Investments</h4></Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link px-4" id="common_txt" to="#"><h4>Property</h4></Link>
+                                <Link class="nav-link px-3" id="common_txt" to="#"><h4>Property</h4></Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link px-4" id="common_txt" to="/dashboard"><h4>Dashboard</h4></Link>
+                                <Link class="nav-link px-3" id="common_txt" to="/dashboard"><h4>Dashboard</h4></Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link px-4" id="common_txt" to="#"><h4>Resources</h4></Link>
+                                <Link class="nav-link px-3" id="common_txt" to="#"><h4>Resources</h4></Link>
                             </li>
                         </div>
                         <li class="nav-item">
