@@ -99,14 +99,14 @@ const Create = () => {
             ;
         }
     return (
-        <div>
+        <div style={{padding: "0px 100px 0px 100px"} }>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-sm-3 rounded d-flex justify-content-center" id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5' }}>
                         <label htmlFor="files"><h4><MdModeEditOutline size={'30px'} />Edit</h4></label>
                         <input onChange={handleImageChange} type='file' id='files' name='files' style={{ display: 'none' }} />
                     </div>
-                    <div className="col-sm-3">
+                    <div className="col-sm-3 ps-0">
 
                         <div className="p-5 ps-0">
 
@@ -114,7 +114,7 @@ const Create = () => {
                             <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.value} name='value' /></p>
 
                             <h5 id="common_txt">Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.unit} name='unit' /></p></h5>
-                            <h5 id="common_txt">
+                            <h5 id="common_txt text-nobreak">
                                 Available Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.available} name='available' /></p>
                             </h5>
                             <h5 id="common_txt">Address: <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.address} name='address' /></p></h5>
