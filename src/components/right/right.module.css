@@ -1,0 +1,111 @@
+.container {
+  border-radius: 4px;
+  position: sticky;
+  width: 30%;
+  left: 30%;
+  top: 0;
+  align-self: baseline;
+  margin-left: 30%;
+}
+
+.wrapper {
+  /* position: sticky; */
+}
+.firstCont,
+.secondCont,
+.thirdCont {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  width: 350px;
+  border: 1px solid #0066f5;
+  margin-bottom: 5%;
+  box-shadow: 0px 2px 5px 0px;
+}
+
+.firstCont {
+}
+.secondCont {
+}
+.thirdCont {
+}
+
+.centralise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  white-space: nowrap;
+  text-align: center;
+}
+.btn {
+  padding: 0.8rem 1rem;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+.secondary {
+  background-color: inherit;
+  color: #0066f6;
+  border: 1px solid #0066f6;
+}
+
+.special {
+  color: #0066f6;
+  font-size: 0.7rem;
+  align-self: center;
+}
+
+.btnCentralise {
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+  width: 100%;
+}
+
+.primary {
+  background-color: #0066f6;
+  color: #fff;
+  width: 300px;
+}
+
+.small {
+  font-size: 0.3;
+}
+.medium {
+  font-size: 0.7;
+}
+
+.largeImg {
+  position: relative;
+  border-radius: 100%;
+}
+
+.smallImg:nth-child(1) {
+  position: relative;
+  top: 0;
+}
+.smallImg:nth-child(2) {
+  position: relative;
+  right: -3px;
+}
+.smallImg:nth-child(3) {
+  position: relative;
+  left: 3px;
+}
+.smallImg:nth-child(4) {
+  position: relative;
+  left: -3px;
+}
+
+.imgFlex {
+  display: flex;
+}

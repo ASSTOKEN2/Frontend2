@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import React from 'react';
 import SignIn from "./components/SignIn/SignIn";
@@ -14,10 +14,14 @@ import Investments from './components/Investesment/InvestmentsPage';
 import PrivacyPolicyContent from './components/PrivacyPolicy/PrivacyPolicyContent';
 import TermsOfUse from './components/TOU/TermsOfUsePage';
 import Body from './components/Suscribe/Body';
+import PropertyLIsting from './components/propertyListing/PropertyLIsting';
+import Bot from './components/Chatbot/body';
+import Create from './components/Create/Create';
 
 const App = () => {
   return (
     <>
+
       <Routes>
         <Route path='/' element={<Main />}>
           <Route index element={<Home />} />
@@ -30,13 +34,14 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />}>
           <Route index element={<DashBody />} />
           <Route path='/dashboard/token' element={<Tokens />} />
+          <Route path='/dashboard/chatbot' element={<Bot />} />
+          <Route path='/dashboard/create' element={<Create />} />
+          <Route path='/dashboard/property' element={<PropertyLIsting />} />
         </Route>
 
         <Route path="/login" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<Profile />} />
-
-
       </Routes>
     </>
   );

@@ -1,11 +1,11 @@
-import "./App.css";
+import React from "react";
 import Chatbot from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
 import config from "./config";
 import MessageParser from "./MessageParser";
 import ActionProvider from "./ActionProvider";
 
-function App() {
+function Bot() {
   return (
     <div>
       <Chatbot
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default Bot;

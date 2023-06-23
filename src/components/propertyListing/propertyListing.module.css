@@ -1,11 +1,10 @@
 .container {
-  position: absolute;
-  top: 10%;
-  width: 727px;
+  width: 70%;
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
   height: 100%;
+  font-size: 2rem;
 }
 .listing {
   margin-bottom: 3rem;
@@ -28,6 +27,11 @@
 .secondary {
   background-color: inherit;
   color: #0066f6;
+  border: 1px solid #0066f6;
+}
+.tetiary {
+  background-color: #0066f6;
+  color: white;
   border: 1px solid #0066f6;
 }
 
@@ -63,11 +67,11 @@
 .infoTitle {
   color: black;
   flex-wrap: nowrap;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 .infoValue {
   color: black;
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 .market {
@@ -78,5 +82,5 @@
 
 .address,
 .propertyId {
-  font-size: 0.8rem;
+  font-size: 2rem;
 }
