@@ -5,6 +5,7 @@ import styles from "../propertyListing/propertyListing.module.css";
 import indexService from '../../services/indexService'
 import { Link, useNavigate } from "react-router-dom";
 import { MdModeEditOutline } from 'react-icons/md'
+
 const data =
 {
     id: "",
@@ -98,29 +99,28 @@ const Create = () => {
             ;
         }
     return (
-        <div className={styles.container}>
-            <div className={styles.listWrap}>
-                <div className={styles.listingCont}>
-                    <div className={styles.listingImg} id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5' }}>
+        <div>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-sm-3 rounded d-flex justify-content-center" id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5' }}>
                         <label htmlFor="files"><h4><MdModeEditOutline size={'30px'} />Edit</h4></label>
                         <input onChange={handleImageChange} type='file' id='files' name='files' style={{ display: 'none' }} />
                     </div>
-                    <div className={styles.listingInfo}>
+                    <div className="col-sm-3">
 
-                        <div className={styles.infoCont}>
+                        <div className="p-5 ps-0">
 
-                            <p className={styles.infoTitle}><input onChange={handlePostChange} value={data.title} name='title' /></p>
-                            <br />
-                            <p className={styles.infoValue}><input onChange={handlePostChange} value={data.value} name='value' /></p>
+                            <p ><input className="rounded-3" style={{ width : '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.title} name='title' /></p>
+                            <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.value} name='value' /></p>
 
-                            <p className={styles.unit}>Unit:<input onChange={handlePostChange} value={data.unit} name='unit' /></p>
-                            <p className={styles.available}>
-                                Available Unit:<input onChange={handlePostChange} value={data.available} name='available' />
-                            </p>
-                            <p className={styles.address}>Address: <input onChange={handlePostChange} value={data.address} name='address' /></p>
-                            <p className={styles.propertyId}>
-                                Property Id: <input onChange={handlePostChange} value={data.propertyId} name='propertyId' />
-                            </p>
+                            <h5 id="common_txt">Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.unit} name='unit' /></p></h5>
+                            <h5 id="common_txt">
+                                Available Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.available} name='available' /></p>
+                            </h5>
+                            <h5 id="common_txt">Address: <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.address} name='address' /></p></h5>
+                            <h5 id="common_txt">
+                                Property Id: <p><input className="rounded-3" style={{ width : '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.propertyId} name='propertyId' /></p>
+                            </h5>
                         </div>
                     </div>
                 </div>
