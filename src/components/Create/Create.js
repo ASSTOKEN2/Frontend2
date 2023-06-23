@@ -113,12 +113,12 @@ const Create = () => {
                             <p ><input className="rounded-3" style={{ width : '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.title} name='title' /></p>
                             <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.value} name='value' /></p>
 
-                            <h5 id="common_txt">Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.unit} name='unit' /></p></h5>
-                            <h5 id="common_txt text-nobreak">
+                            <h5 id="common_txt" style={{width : "200px"} }>Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.unit} name='unit' /></p></h5>
+                            <h5 id="common_txt" style={{width : "200px"} }>
                                 Available Unit:<p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.available} name='available' /></p>
                             </h5>
-                            <h5 id="common_txt">Address: <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.address} name='address' /></p></h5>
-                            <h5 id="common_txt">
+                            <h5 id="common_txt" style={{width : "200px"} }>Address: <p><input className="rounded-3" style={{ width: '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.address} name='address' /></p></h5>
+                            <h5 id="common_txt" style={{width : "200px"} }>
                                 Property Id: <p><input className="rounded-3" style={{ width : '300px', height: "50px", border: "solid 1px" }} onChange={handlePostChange} value={data.propertyId} name='propertyId' /></p>
                             </h5>
                         </div>
