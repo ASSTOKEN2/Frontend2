@@ -101,7 +101,7 @@ const Create = () => {
         <div className={styles.container}>
             <div className={styles.listWrap}>
                 <div className={styles.listingCont}>
-                    <div className={styles.listingImg} id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5', width: "280px", height: "280px", backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: '280px,280px' }}>
+                    <div className={styles.listingImg} id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5' }}>
                         <label htmlFor="files"><h4><MdModeEditOutline size={'30px'} />Edit</h4></label>
                         <input onChange={handleImageChange} type='file' id='files' name='files' style={{ display: 'none' }} />
                     </div>
