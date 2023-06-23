@@ -5,8 +5,23 @@ const MessageParser = ({ children, actions }) => {
     if (message.includes("hello")) {
       actions.handleHello();
     }
-    if (message.includes("greet")) {
-      actions.handleGreet();
+    if (message.includes("know more")) {
+      actions.knowMore();
+    }
+    if (message.includes("digital tokens")) {
+      actions.digitalTokens();
+    }
+    if (message.includes("fund wallet")) {
+      actions.fundWallet();
+    }
+    if (message.includes("crypto used")) {
+      actions.cryptoUsed();
+    }
+    if (message.includes("start platform")) {
+      actions.startPlatform();
+    }
+    if (message.includes("trust platform")) {
+      actions.trustPlatform();
     }
   };
 

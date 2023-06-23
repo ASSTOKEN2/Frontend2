@@ -1,10 +1,12 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 
-const botName = "Azeez";
+const botName = "Comfy";
 
 const config = {
   initialMessages: [
-    createChatBotMessage(`Hi I'm ${botName}, how may i help you?`),
+    createChatBotMessage(
+      `Hi my name is ${botName}, i am your AI personal assistant, How may i help you?`
+    ),
   ],
   botName: botName,
   customStyles: {
