@@ -1,4 +1,5 @@
 import React from "react";
+import Message from "./Apis";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const handleHello = () => {
@@ -77,6 +78,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, botMessage],
     }));
   };
+  const chatbot = (botMessage) => {
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  };
 
   return (
     <div>
@@ -90,6 +97,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
             cryptoUsed,
             startPlatform,
             trustPlatform,
+            chatbot,
           },
         });
       })}
