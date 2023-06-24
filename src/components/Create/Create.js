@@ -99,7 +99,7 @@ const Create = () => {
             ;
         }
     return (
-        <div style={{padding: "0px 100px 0px 100px"} }>
+        <div style={{padding: "0px 130px 0px 130px"} }>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-sm-3 rounded d-flex justify-content-center" id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5' }}>
