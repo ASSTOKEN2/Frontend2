@@ -28,7 +28,7 @@ const Right = () => {
                 </Link>
                 <p className={`${styles.text} ${styles.special}`}>Redeem</p>
                 <img
-                  src="/images/copy.svg"
+                  src="Images/copy.svg"
                   width={20}
                   height={20}
                   alt="copy"
@@ -43,7 +43,7 @@ const Right = () => {
                 </Link>
                 <p className={`${styles.text} ${styles.special}`}>Redeem</p>
                 <img
-                  src="/images/copy.svg"
+                  src="Images/copy.svg"
                   width={20}
                   height={20}
                   alt="copy"
@@ -55,7 +55,7 @@ const Right = () => {
           <div className={styles.thirdCont}>
             <div className={styles.centralise}>
               <img
-                src="/images/people.svg"
+                src="Images/people.svg"
                 width={60}
                 height={60}
                 alt="copy"
@@ -63,28 +63,28 @@ const Right = () => {
               />
               <div className={styles.imgFlex}>
                 <img
-                  src="/images/people.svg"
+                  src="Images/people.svg"
                   width={60}
                   height={60}
                   alt="copy"
                   className={styles.smallImg}
                 />
                 <img
-                  src="/images/people.svg"
+                  src="Images/people.svg"
                   width={60}
                   height={60}
                   alt="copy"
                   className={styles.smallImg}
                 />
                 <img
-                  src="/images/people.svg"
+                  src="Images/people.svg"
                   width={60}
                   height={60}
                   alt="copy"
                   className={styles.smallImg}
                 />
                 <img
-                  src="/images/people.svg"
+                  src="Images/people.svg"
                   width={60}
                   height={60}
                   alt="copy"
