@@ -19,7 +19,7 @@ const Slider = () => {
             >
                 <div className={styles.imgContainer}>
                     <img
-                        src="/images/image1.svg"
+                        src="/Images/HomePage/image1.svg"
                         alt="image1"
                         className={styles.img}
                         width={1000}
@@ -37,7 +37,7 @@ const Slider = () => {
                 </div>
                 <div className={styles.imgContainer}>
                     <img
-                        src="/images/image1.svg"
+                        src="/Images/HomePage/image1.svg"
                         alt="image1"
                         className={styles.img}
                         width={100}
