@@ -166,11 +166,11 @@ const Profile = () => {
                                     data-shrink="true"
                                     htmlFor="username"
                                     id="username-label"
-                                >Username<span
+                                ><h4 id="common_txt">Username<span
                                     aria-hidden="true"
                                     className="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
                                 >
-                                        *</span></label>
+                                        *</span></h4></label>
                                 <div
                                     className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
                                 >
@@ -200,11 +200,11 @@ const Profile = () => {
                                     data-shrink="true"
                                     htmlFor="password"
                                     id="password-label"
-                                >Password<span
+                                ><h4 id="common_txt">Password<span
                                     aria-hidden="true"
                                     className="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
                                 >
-                                        *</span></label>
+                                        *</span></h4></label>
                                 <div
                                     className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
                                 >
@@ -236,35 +236,34 @@ const Profile = () => {
                                     </fieldset>
                                 </div>
                             </div>
-                            <label
-                                className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
-                            ><span
-                                className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
-                            ><input
-                                        className="PrivateSwitchBase-input css-1m9pwf3"
-                                        type="checkbox"
-                                        value="remember" /><svg
-                                            className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-                                            focusable="false"
-                                            viewBox="0 0 24 24"
-                                        >
-                                        <path
-                                            d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                                        ></path>
+                            <label className="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root">
+                                <span className="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root">
+                                    <input className="PrivateSwitchBase-input css-1m9pwf3" type="checkbox" value="remember" />
+                                    <svg className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24">
+                                        <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
                                     </svg>
-                                    <span
-                                        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                    ></span></span><span
-                                        className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
-                                    >Remember me</span></label><button
+                                    <span className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"></span>
+                                </span>
+                                <span className="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root">
+                                    <h6>
+                                        Remember me
+                                    </h6>
+                                </span>
+                            </label>
+                            <button
                                         className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1vhaqj4-MuiButtonBase-root-MuiButton-root"
                                         tabIndex="0"
 
                                         type="submit"
+                            >
+                                <h5><b>
+                                    Submit
+                                    <span
+                                        className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                                     >
-                                Submit<span
-                                    className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                                ></span>
+                                    </span>
+                                    </b>
+                                </h5>
                             </button>
                             <p
                                 className="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter css-5k114j-MuiTypography-root"

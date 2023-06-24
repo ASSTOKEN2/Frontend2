@@ -3,12 +3,12 @@ import Hero from "../hero/Hero";
 
 export default function Home() {
 	return (
-		<>
-
+		<div id="overflow_x">
+			<Hero />
 			<div className="container-fluid pb-5">
 				<div className="row pb-5">
 
-					<Hero />
+					
 
 					<div className="col-sm-6 p-5">
 						<div className="row">
@@ -181,6 +181,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

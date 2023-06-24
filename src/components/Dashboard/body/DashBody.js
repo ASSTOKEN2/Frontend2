@@ -36,7 +36,7 @@ const DashBody = () => {
     }, [id])
 
     return (
-        <>
+        <div style={{padding: "0 100px 0 100px"} }>
             <div className="main_content_iner ">
                 <div className="container-fluid plr_30 body_white_bg pt_30">
                     <div className="row justify-content-center">
@@ -107,7 +107,7 @@ const DashBody = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

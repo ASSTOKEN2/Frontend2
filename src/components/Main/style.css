@@ -1,6 +1,9 @@
 * {
     font-family: Euclid Circular A;
 }
+#overflow_x {
+    overflow-x: hidden;   
+}
 #common_bg {
     background: #082552;
 }
