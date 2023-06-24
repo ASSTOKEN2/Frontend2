@@ -57,13 +57,13 @@ export default function Footer() {
           <div className="clearfix mb-5">
             <div className="ps-5 float-start">
               <a className="p-3 ps-0" href="">
-                <img className="" width="40" src="/Images/Discord.png" />
+                <img className="" width="40" src="Images/Discord.png" />
               </a>
               <a className="p-3" href="">
-                <img className="" width="40" src="/Images/IG.png" />
+                <img className="" width="40" src="Images/IG.png" />
               </a>
               <a className="p-3" href="">
-                <img className="" width="40" src="/Images/Linkedin.png" />
+                <img className="" width="40" src="Images/Linkedin.png" />
               </a>
             </div>
             <div className="float-end pe-5 bg-white rounded-3 mb-5">
