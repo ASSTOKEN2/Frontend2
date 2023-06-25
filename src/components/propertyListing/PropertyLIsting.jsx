@@ -31,7 +31,7 @@ const PropertyLIsting = () => {
         <div className={styles.listingCont}>
           <div className={styles.listingImg}>
             <img
-              src="Images/house.svg"
+              src="/images/house.svg"
               width={300}
               height={300}
               alt="img"
@@ -67,7 +67,7 @@ const PropertyLIsting = () => {
         <div className={styles.listingCont}>
           <div className={styles.listingImg}>
             <img
-              src="Images/house.svg"
+              src="/images/house.svg"
               width={300}
               height={300}
               alt="img"
