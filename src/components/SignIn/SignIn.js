@@ -53,16 +53,19 @@ const SignIn = () => {
 
             if (Details.email && Details.password) {
                 blogService.loginUser(Details).then((response) => {
-                    const data = response.data
+                    const data = response.data.status
+                    console.log(data)
 
-                    if (data) {
+                    if (data == "200") {
                         var today = Date()
                         var tomorrow = new Date()
                         tomorrow.setDate(today + 4)
-                        setCookies('token', response.data, { path: '/', expires: tomorrow })
+                        setCookies('token', response.data.token, { path: '/', expires: tomorrow })
                         setSuccessful(true)
                     }
                     else {
+                        const err = response.data.error
+                        console.log(err)
                         setSuccessful(false)
                     }
 
@@ -228,7 +231,7 @@ const SignIn = () => {
                                 <div className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root">
                                     <Link to='/signup'
                                         className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-wpssva-MuiTypography-root-MuiLink-root"
-                                        href="/client.github.io/#/signup"
+
                                     >Don't have an account? Sign up</Link>
                                 </div>
                             </div>
@@ -238,9 +241,9 @@ const SignIn = () => {
                                 Copyright ©
                                 <a
                                     className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1kgfegd-MuiTypography-root-MuiLink-root"
-                                    href="http://localhost:3000/login"
-                                >AccessToken</a>
-                                2023.
+                                    href="/"
+                                > AccessToken </a> 2023.
+
                             </p>
                         </form>
                     </div>

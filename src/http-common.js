@@ -2,6 +2,6 @@ import axios from 'axios'
 
 export default
   axios.create({
-    baseURL: "https://backend-d9u7.onrender.com",
+    baseURL: "http://localhost:2500",
     withCredentials: true
   })

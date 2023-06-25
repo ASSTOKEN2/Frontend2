@@ -7,13 +7,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdModeEditOutline } from 'react-icons/md'
 const data =
 {
-    id: "",
     title: "",
     value: "",
     unit: "",
     available: "",
     address: "",
-    propertyId: "",
     image: ""
 }
     ;
@@ -29,7 +27,7 @@ const Create = () => {
 
     const [Details, setDetails] = useState(initialDetails)
 
-    const [user, setUser] = useState(data)
+    const [property, setProperty] = useState(data)
     const [file, setfile] = useState("")
 
 
@@ -63,7 +61,8 @@ const Create = () => {
     const handlePostChange = event => {
 
         const { name, value } = event.target;
-        setUser({ ...user, [name]: value });
+
+        setProperty({ ...property, [name]: value });
     };
 
 
@@ -79,17 +78,15 @@ const Create = () => {
             axios.post(`https://api.cloudinary.com/v1_1/dyevylpk8/image/upload`, formData).then((response) => {
                 if (response.data.secure_url) {
                     const oldurl = response.data.secure_url
-                    const newurl = oldurl.split(".j")
-                    const url = newurl[0] + ".png"
-                    setUser({ ...user, ['image']: url })
-                    indexService.update(cookies.token, { user: user, url: url }).then((response) => {
+                    // const newurl = oldurl.includes()
+                    // const url = newurl[0] + ".png"
+
+                    indexService.create(cookies.token, { property: property, url: oldurl }).then((response) => {
                         navigate('/dashboard')
                     }).catch((error) => {
                         console.log(error)
                     })
 
-                    console.log(user)
-                    console.log(url);
                 }
             })
                 .catch((error) => {
@@ -101,26 +98,27 @@ const Create = () => {
         <div className={styles.container}>
             <div className={styles.listWrap}>
                 <div className={styles.listingCont}>
-                    <div className={styles.listingImg} id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5' }}>
+                    <div className={styles.listingImg} id='img' style={{ alignItems: 'center', display: 'flex', width: '300px', height: '300px', backgroundColor: '#0066f5', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: '300px,300px' }}>
                         <label htmlFor="files"><h4><MdModeEditOutline size={'30px'} />Edit</h4></label>
                         <input onChange={handleImageChange} type='file' id='files' name='files' style={{ display: 'none' }} />
                     </div>
                     <div className={styles.listingInfo}>
 
                         <div className={styles.infoCont}>
+                            Title:
+                            <p className={styles.infoTitle}><input onChange={handlePostChange} value={property.title} name='title' /></p>
+                            Price:
+                            <p className={styles.infoValue}><input onChange={handlePostChange} value={property.value} name='value' /></p>
 
-                            <p className={styles.infoTitle}><input onChange={handlePostChange} value={data.title} name='title' /></p>
-                            <br />
-                            <p className={styles.infoValue}><input onChange={handlePostChange} value={data.value} name='value' /></p>
-
-                            <p className={styles.unit}>Unit:<input onChange={handlePostChange} value={data.unit} name='unit' /></p>
+                            <p className={styles.unit}>Unit:<input onChange={handlePostChange} value={property.unit} name='unit' /></p>
                             <p className={styles.available}>
-                                Available Unit:<input onChange={handlePostChange} value={data.available} name='available' />
+                                Available Unit:<input onChange={handlePostChange} value={property.available} name='available' />
                             </p>
-                            <p className={styles.address}>Address: <input onChange={handlePostChange} value={data.address} name='address' /></p>
+                            <p className={styles.address}>Address: <input onChange={handlePostChange} value={property.address} name='address' /></p>
                             <p className={styles.propertyId}>
-                                Property Id: <input onChange={handlePostChange} value={data.propertyId} name='propertyId' />
+                                Property Id: <input onChange={handlePostChange} value={property.propertyId} name='propertyId' />
                             </p>
+                            <button className="btn btn-primary" onClick={Post} >Submit</button>
                         </div>
                     </div>
                 </div>

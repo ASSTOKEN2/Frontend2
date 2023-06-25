@@ -1,6 +1,6 @@
 import React from "react";
 import Message from "./Apis";
-
+import https from "https";
 const MessageParser = ({ children, actions }) => {
   const testURL = "https://chatbot-apz7.onrender.com/chatBot";
 
@@ -31,6 +31,37 @@ const MessageParser = ({ children, actions }) => {
         message: "Hello",
       };
       console.log(data);
+      var options = {
+        host: "chatbot-apz7.onrender.com",
+        port: "443",
+        path: "/chatBot",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Content-Length": data.length,
+        },
+        mode: "no-cors",
+      };
+      const req = https
+        .request(options, (res) => {
+          let data = "";
+
+          console.log("Status Code:", res.statusCode);
+
+          res.on("data", (chunk) => {
+            data += chunk;
+          });
+
+          res.on("end", () => {
+            console.log("Body: ", JSON.parse(data));
+          });
+        })
+        .on("error", (err) => {
+          console.log("Error: ", err.message);
+        });
+      req.write(data);
+      req.end();
+
       // Message(data)
       //   .then((response) => {
       //     console.log(response);
@@ -40,24 +71,25 @@ const MessageParser = ({ children, actions }) => {
       //     console.log(err);
       //   });
       // ...
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
 
-      var raw = JSON.stringify({
-        message: "Hello",
-      });
+      // var myHeaders = new Headers();
+      // myHeaders.append("Content-Type", "application/json");
 
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
+      // var raw = JSON.stringify({
+      //   message: "Hello",
+      // });
 
-      fetch("https://chatbot-apz7.onrender.com/chatBot", requestOptions)
-        .then((response) => response.text())
-        .then((result) => console.log(result))
-        .catch((error) => console.log("error", error));
+      // var requestOptions = {
+      //   method: "POST",
+      //   headers: myHeaders,
+      //   body: raw,
+      //   redirect: "follow",
+      // };
+
+      // fetch("https://chatbot-apz7.onrender.com/chatBot", requestOptions)
+      //   .then((response) => response.text())
+      //   .then((result) => console.log(result))
+      //   .catch((error) => console.log("error", error));
 
       // let fetchData = {
       //   method: "POST",

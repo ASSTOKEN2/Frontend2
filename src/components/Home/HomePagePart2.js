@@ -8,7 +8,7 @@ export default function Home() {
 			<div className="container-fluid pb-5">
 				<div className="row pb-5">
 
-					
+
 
 					<div className="col-sm-6 p-5">
 						<div className="row">
@@ -58,8 +58,8 @@ export default function Home() {
 						<img className="img-fluid" src="Images/HomePage/Group47097.png" />
 					</div>
 				</div>
-				<div class="container row p-0 m-5 mt-0">
-					<div class="container-fluid col-sm-4 border border-1 text-white p-3">
+				<div className="container row p-0 m-5 mt-0">
+					<div className="container-fluid col-sm-4 border border-1 text-white p-3">
 						<div className="pb-5">
 							<h1>01</h1>
 							<h4>Diversification and Portfolio Management</h4>
@@ -71,7 +71,7 @@ export default function Home() {
 							<p>We prioritize transparency and security in all our operations. Through blockchain technology and smart contracts, we ensure that every transaction and ownership transfer is recorded on an immutable ledger, creating a transparent and tamper-proof system. Additionally, we implement robust security measures to protect our investors' personal and financial information</p>
 						</div>
 					</div>
-					<div class="container-fluid col-sm-4 border border-1 text-white p-3">
+					<div className="container-fluid col-sm-4 border border-1 text-white p-3">
 						<div className="pb-5">
 							<h1>02</h1>
 							<h4>Fractional Ownership</h4>
@@ -83,7 +83,7 @@ export default function Home() {
 							<p>We believe in empowering our investors with knowledge and support. Our platform provides educational resources, market insights, and investment guides to help investors make informed decisions. Furthermore, our dedicated customer support team is available to address any questions or concerns you may have throughout your investment journey.</p>
 						</div>
 					</div>
-					<div class="container-fluid col-sm-4 border border-1 text-white p-3">
+					<div className="container-fluid col-sm-4 border border-1 text-white p-3">
 						<div className="pb-5">
 							<h1>03</h1>
 							<h4>Accessibility and Liquidity</h4>
@@ -98,7 +98,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			<div classname="p-5 m-5 w-25">
+			<div className="p-5 m-5 w-25">
 				<h5 className="text-center text-primary pt-5 mt-5">Property Listing</h5>
 				<h1 className="text-center" id="common_txt"><b>Find Your Ideal Real Estate</b></h1>
 				<h1 className="text-center" id="common_txt"><b>Investment Opportunities</b></h1>
@@ -143,7 +143,7 @@ export default function Home() {
 					<button className="bg-primary py-3 px-5 rounded-2 border-0">See All</button>
 				</div>
 
-				<div classname="container p-5">
+				<div className="container p-5">
 					<h5 className="text-center text-primary pt-5">Process</h5>
 					<h1 className="text-center" id="common_txt"><b>Get Started In 4 Steps</b></h1>
 				</div>

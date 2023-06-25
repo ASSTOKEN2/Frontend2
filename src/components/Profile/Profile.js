@@ -5,6 +5,7 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai'
 import { RiPencilFill } from 'react-icons/ri'
 import indexService from '../../services/indexService'
 import axios from 'axios'
+import crypto from 'crypto'
 
 
 const Profile = () => {
@@ -88,7 +89,49 @@ const Profile = () => {
         const { name, value } = event.target;
         setUser({ ...user, [name]: value });
     };
+    const img = user.image
+    const regex = /\/v\d+\/([^/]+)\.\w{3,4}$/;
+    const getPublicIdFromUrl = (img) => {
 
+        const match = img.match(regex);
+        return match ? match[1] : null;
+    };
+
+    const publicId = getPublicIdFromUrl(img);
+    console.log(publicId);
+
+    const generateSHA1 = (data) => {
+        const hash = crypto.createHash("sha1");
+        hash.update(data);
+        return hash.digest("hex");
+    }
+
+    const generateSignature = (publicId, apiSecret) => {
+        const timestamp = new Date().getTime();
+        return `public_id=${publicId}&timestamp=${timestamp}${apiSecret}`;
+    };
+    const handleDeleteImage = async (publicId) => {
+        const cloudName = 'your_cloud_name';
+        const timestamp = new Date().getTime();
+        const apiKey = 'your_api_key';
+        const apiSecret = 'your_api_secret'
+        const signature = generateSHA1(generateSignature(publicId, apiSecret));
+        const url = `https://api.cloudinary.com/v1_1/dyevylpk8/image/destroy`;
+
+        try {
+            const response = await axios.post(url, {
+                public_id: publicId,
+                signature: signature,
+                api_key: apiKey,
+                timestamp: timestamp,
+            });
+
+            console.error(response);
+
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
     const Post =
         async (event) => {
@@ -103,7 +146,7 @@ const Profile = () => {
                 if (response.data.secure_url) {
                     const oldurl = response.data.secure_url
                     // const url = newurl[0] + ".png"
-                    setUser({ ...user, ['image']: oldurl })
+
                     indexService.update(cookies.token, { user: user, url: oldurl }).then((response) => {
                         navigate('/dashboard')
                     }).catch((error) => {
@@ -170,7 +213,7 @@ const Profile = () => {
                                     aria-hidden="true"
                                     className="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
                                 >
-                                        *</span></h4></label>
+                                    *</span></h4></label>
                                 <div
                                     className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
                                 >
@@ -204,7 +247,7 @@ const Profile = () => {
                                     aria-hidden="true"
                                     className="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
                                 >
-                                        *</span></h4></label>
+                                    *</span></h4></label>
                                 <div
                                     className="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
                                 >
@@ -251,10 +294,10 @@ const Profile = () => {
                                 </span>
                             </label>
                             <button
-                                        className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1vhaqj4-MuiButtonBase-root-MuiButton-root"
-                                        tabIndex="0"
+                                className="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButtonBase-root  css-1vhaqj4-MuiButtonBase-root-MuiButton-root"
+                                tabIndex="0"
 
-                                        type="submit"
+                                type="submit"
                             >
                                 <h5><b>
                                     Submit
@@ -262,7 +305,7 @@ const Profile = () => {
                                         className="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                                     >
                                     </span>
-                                    </b>
+                                </b>
                                 </h5>
                             </button>
                             <p

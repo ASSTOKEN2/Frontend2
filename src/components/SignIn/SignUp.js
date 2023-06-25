@@ -60,16 +60,19 @@ const SignUp = () => {
 
             if (Details.email && Details.password && Details.username) {
                 blogService.registerUser(Details).then((response) => {
-                    const data = response.data
+                    const data = response.data.status
                     console.log(data)
-                    if (data) {
+
+                    if (data == "200") {
                         var today = Date()
                         var tomorrow = new Date()
                         tomorrow.setDate(today + 4)
-                        setCookies('token', response.data, { path: '/', expires: tomorrow })
+                        setCookies('token', response.data.token, { path: '/', expires: tomorrow })
                         setSuccessful(true)
                     }
                     else {
+                        const err = response.data.error
+                        console.log(err)
                         setSuccessful(false)
                     }
 
@@ -269,9 +272,8 @@ const SignUp = () => {
                                     >
                                 </div>
                                 <div className="MuiGrid-root MuiGrid-item css-13i4rnv-MuiGrid-root">
-                                    <Link to='/'
+                                    <Link to='/login'
                                         className="MuiTypography-root MuiTypography-body2 MuiLink-root MuiLink-underlineAlways css-wpssva-MuiTypography-root-MuiLink-root"
-                                        href="/"
                                     > Have an account? Sign In</Link>
                                 </div>
                             </div>
@@ -281,8 +283,8 @@ const SignUp = () => {
                                 Copyright ©
                                 <a
                                     className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-1kgfegd-MuiTypography-root-MuiLink-root"
-                                    href="http://localhost:3000/login"
-                                >pablo-codes</a>
+                                    href="/"
+                                >AccessToken</a>
                                 2023.
                             </p>
                         </form>

@@ -9,6 +9,10 @@ const edit = (id) => {
 const update = (id, data) => {
     return http.put(`/update-user/${id}`, data)
 }
+const create = (id, data) => {
+    return http.post(`/createpro/${id}`, data)
+}
 
-const indexService = { index, edit, update }
+
+const indexService = { index, edit, update, create }
 export default indexService
